@@ -3,6 +3,14 @@
 All notable changes to this project are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [1.1.0] - 2026-08-29
+
+### Added
+- Dedicated "Cryptovali" item in the WordPress admin sidebar menu, linking directly to the gateway's settings page.
+
+### Changed
+- Gateway display name in WooCommerce → Settings → Payments changed to "درگاه پرداخت ارز دیجیتال Cryptovali" (was: "پرداخت ارز دیجیتال (BEP20 / TRC20)").
+
 ## [1.0.0] - 2026-08-29
 
 ### Added
