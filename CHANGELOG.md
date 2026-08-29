@@ -3,6 +3,31 @@
 All notable changes to this project are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [1.4.0] - 2026-08-29
+
+### Added
+- Automatic update checker: the plugin now polls GitHub Releases (`silent4time/Cryptovali`) and shows a native WordPress "update available" notice when a newer version is published, with one-click update support.
+- "View version details" popup on the Plugins page, populated from the GitHub release notes.
+- "بررسی بروزرسانی جدید" (Check for new update) link under the plugin entry on the Plugins page, for forcing an immediate re-check.
+- Automatic folder-name correction so updates installed from GitHub's auto-generated source zip land in the correct `cryptovali/` directory.
+
+## [1.3.0] - 2026-08-29
+
+### Added
+- Dedicated "Cryptovali" admin dashboard with its own real settings page (no longer a redirect into WooCommerce → Payments).
+- New "تراکنش‌ها" (Transactions) admin page: a table listing order number, date, product(s), amount, network/currency, and payment status (confirmed / pending / expired) for every Cryptovali order.
+- Contextual "؟" help icon next to every settings field; clicking it opens a popup with a plain-Persian explanation of how to fill that field.
+- Centralized field definitions (`CP_Fields`) shared between the WooCommerce settings screen and the new dashboard, so the two never drift out of sync.
+
+## [1.2.0] - 2026-08-29
+
+### Changed
+- Wallet address settings split into three independent fields: BNB (BEP20), USDT (BEP20), and USDT (TRC20) — previously BNB and USDT-BEP20 shared one address field.
+- Each network now has its own "show to customer" toggle, independent of the others, so any combination of payment options can be enabled or hidden at checkout regardless of whether an address is configured.
+
+### Migration note
+- Existing installs upgrading from 1.1.x or earlier must re-enter wallet addresses: the old shared "BEP20 address" field is replaced by separate "BNB (BEP20)" and "USDT (BEP20)" address fields.
+
 ## [1.1.0] - 2026-08-29
 
 ### Added
