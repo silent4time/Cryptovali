@@ -1,6 +1,6 @@
 # Cryptovali
 
-[![Version](https://img.shields.io/badge/version-1.4.0-blue.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.5.0-blue.svg)](CHANGELOG.md)
 [![WordPress](https://img.shields.io/badge/WordPress-6.0%2B-21759b.svg)](https://wordpress.org)
 [![WooCommerce](https://img.shields.io/badge/WooCommerce-8.0%2B-96588a.svg)](https://woocommerce.com)
 [![License](https://img.shields.io/badge/license-GPL--2.0%2B-green.svg)](LICENSE)
@@ -11,7 +11,7 @@ Persian documentation: [README-fa.md](README-fa.md)
 
 ## Features
 
-- **Networks supported:** BNB (BEP20), USDT (BEP20), USDT (TRC20)
+- **Networks supported:** BNB (BEP20), USDT (BEP20), USDT (TRC20), TRX (Tron)
 - **Fully automatic payment detection** — no manual TxHash entry required
 - **Free data sources only** — BscScan API (free tier), TronGrid (public), CoinGecko (public) for live exchange rates
 - Wallet addresses configurable from the WordPress admin panel (no code editing needed)

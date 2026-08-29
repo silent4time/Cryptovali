@@ -3,6 +3,14 @@
 All notable changes to this project are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [1.5.0] - 2026-08-29
+
+### Added
+- Native **TRX** (Tron) support as a fourth payment option, alongside BNB-BEP20, USDT-BEP20, and USDT-TRC20.
+- New independent "TRX wallet address" field with its own "show to customer" toggle, following the same pattern as the other three networks.
+- Automatic detection of incoming TRX transfers via TronGrid's native transactions endpoint (separate from the existing TRC20 token-transfer detection used for USDT).
+- TRX price feed added to the CoinGecko exchange-rate lookup.
+
 ## [1.4.0] - 2026-08-29
 
 ### Added
