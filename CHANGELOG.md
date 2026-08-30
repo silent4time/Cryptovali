@@ -3,6 +3,11 @@
 All notable changes to this project are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [1.5.6] - 2026-08-29
+
+### Fixed
+- Removed the nonce requirement from the three read-only diagnostic actions ("تست زنده‌ی اتصال به گیت‌هاب", "تست اتصال به سرویس‌های ضروری", "بررسی بروزرسانی جدید") — they only display information or trigger a re-check, they never change any setting, so they no longer depend on WordPress's nonce system. This fixes a "The link you followed has expired" error some sites showed for these buttons (typically caused by unstable secret keys in `wp-config.php` or a caching/security plugin interfering with nonce validation) while keeping full nonce protection on the actual settings-save form, which does modify data.
+
 ## [1.5.5] - 2026-08-29
 
 ### Added
