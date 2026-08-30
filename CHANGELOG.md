@@ -3,6 +3,15 @@
 All notable changes to this project are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [1.5.2] - 2026-08-29
+
+### Added
+- Automatic fallback to jsDelivr (a free public CDN that mirrors GitHub repository content) when direct access to `api.github.com` fails from the hosting server's network — a common issue on hosts subject to firewalling or network filtering. The update checker now tries GitHub first, then transparently falls back to jsDelivr for both version detection and package download.
+- The live diagnostic panel now reports which source succeeded (GitHub or jsDelivr), and shows both error messages if neither is reachable.
+
+### Fixed
+- Release/version tags are now validated against a strict `vX.Y.Z` pattern before being considered, preventing a misnamed release title or tag from being misread as a version number.
+
 ## [1.5.1] - 2026-08-29
 
 ### Fixed
