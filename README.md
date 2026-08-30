@@ -1,6 +1,6 @@
 # Cryptovali
 
-[![Version](https://img.shields.io/badge/version-1.5.2-blue.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.5.5-blue.svg)](CHANGELOG.md)
 [![WordPress](https://img.shields.io/badge/WordPress-6.0%2B-21759b.svg)](https://wordpress.org)
 [![WooCommerce](https://img.shields.io/badge/WooCommerce-8.0%2B-96588a.svg)](https://woocommerce.com)
 [![License](https://img.shields.io/badge/license-GPL--2.0%2B-green.svg)](LICENSE)
@@ -75,13 +75,12 @@ cryptovali/
 The plugin checks GitHub Releases automatically, so every update must be published as a proper **Release**, not just a pushed commit:
 
 1. Bump the version number in `cryptovali.php` (both the `Version:` header and the `CRYPTOVALI_VERSION` constant) and add an entry to `CHANGELOG.md`.
-2. On GitHub → **Releases** → **Draft a new release**.
-3. Create a new tag matching the version, prefixed with `v` (e.g. `v1.4.0`).
-4. Paste the changelog entry into the release description.
-5. **Attach `cryptovali-vX.Y.Z.zip`** (the installable zip, with `cryptovali/` as its single top-level folder) as a release asset — this is what WordPress sites will actually download when updating. If no matching asset is attached, sites fall back to GitHub's auto-generated source zip, which works but is less clean.
-6. Publish the release.
+2. In the repository, replace the existing **`cryptovali.zip`** file with the new build — same filename every time, no version number in the name. Uploading a file with the same name lets GitHub overwrite it in a new commit; you never need to delete an old version-numbered file first.
+3. On GitHub → **Releases** → **Draft a new release**.
+4. Create a new tag matching the version, prefixed with `v` (e.g. `v1.6.0`) — this must be created **after** step 2, so the tag's snapshot includes the updated `cryptovali.zip`.
+5. Paste the changelog entry into the release description and publish.
 
-Within a few hours (or immediately via the "بررسی بروزرسانی جدید" link under the plugin on the Plugins page), every site running Cryptovali will show a standard WordPress "update available" notice and can update with one click, exactly like a plugin from the official directory.
+Within a few hours (or immediately via the "بررسی بروزرسانی جدید" link under the plugin on the Plugins page), every site running Cryptovali will show a standard WordPress "update available" notice and can update with one click. If a site's server cannot reach `api.github.com` directly (common on some hosts due to firewalls or network filtering), it automatically falls back to fetching `cryptovali.zip` via jsDelivr instead — no extra setup needed on your end.
 
 ## Roadmap
 

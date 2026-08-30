@@ -3,6 +3,26 @@
 All notable changes to this project are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [1.5.5] - 2026-08-29
+
+### Added
+- New "تست اتصال به سرویس‌های حیاتی افزونه" (Test connection to the plugin's critical services) panel on the settings dashboard: checks live connectivity to CoinGecko, BscScan, TronGrid (the actual payment-detection engine), in addition to GitHub/jsDelivr (update-only). Flags clearly if a critical service is unreachable, since that means automatic payment detection may currently be broken — a more urgent issue than the updater itself.
+
+### Fixed
+- `Plugin URI` in the plugin header updated from the placeholder `https://github.com/YOUR-USERNAME/cryptovali` to the real repository address `https://github.com/silent4time/Cryptovali` — this is what "دیدن خانهٔ افزونه" (Visit plugin site) on the Plugins page links to.
+- Added `Author URI` pointing to the same GitHub repository, so "بدست Cryptovali" (By Cryptovali) on the Plugins page is now a working link.
+
+## [1.5.4] - 2026-08-29
+
+### Changed
+- Plugin display name (shown on the Plugins page) changed from "Cryptovali - Crypto Payment Gateway for WooCommerce" to "CryptoVali | درگاه پرداخت ارز دیجیتال".
+
+## [1.5.3] - 2026-08-29
+
+### Changed
+- The installable plugin zip is now always named `cryptovali.zip` — no version number in the filename. This lets the repository owner simply overwrite the same file on every release instead of accumulating a new versioned zip (`cryptovali-vX.Y.Z.zip`) each time.
+- The jsDelivr fallback now looks for this fixed filename (`cryptovali.zip`) at each release tag, instead of guessing a versioned filename pattern.
+
 ## [1.5.2] - 2026-08-29
 
 ### Added
