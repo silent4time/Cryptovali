@@ -3,6 +3,14 @@
 All notable changes to this project are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [1.5.1] - 2026-08-29
+
+### Fixed
+- The GitHub updater now resolves the plugin's basename dynamically (via `plugin_basename(__FILE__)`) instead of assuming a hardcoded `cryptovali/cryptovali.php` path, making update detection reliable regardless of the actual installed folder name.
+
+### Added
+- New live diagnostic panel on the Cryptovali settings dashboard ("تست زنده‌ی اتصال به گیت‌هاب"): performs an uncached call to the GitHub Releases API and displays the exact result (success/failure, detected version, HTTP error code, or connection error) directly on the page, to make troubleshooting update-detection issues straightforward without needing server access.
+
 ## [1.5.0] - 2026-08-29
 
 ### Added
